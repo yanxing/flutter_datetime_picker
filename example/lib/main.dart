@@ -1,3 +1,4 @@
+import 'package:example/no_dialog_date_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 
@@ -250,6 +251,13 @@ class HomePage extends StatelessWidget {
                   'show custom time picker,\nyou can custom picker model like this',
                   style: TextStyle(color: Colors.blue),
                 )),
+            TextButton(
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) {
+                    return NoDialogDatePage();
+                  }));
+                },
+                child: Text("显示时间，不以弹窗形式"))
           ],
         ),
       ),
